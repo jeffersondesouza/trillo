@@ -7,9 +7,14 @@
 }
 
 .header {
-    min-height: 7rem;
+    font-size: 1.4rem;
+    font-size: 1.4rem;
+    height: 7rem;
     background-color: #fff;
     border-bottom: var( --grey-light-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .content {
