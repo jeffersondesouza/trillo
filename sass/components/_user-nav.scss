@@ -2,6 +2,8 @@
     align-self: stretch;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid var(--grey-light-2);
+
     &>* {
         padding: 0 2rem;
         cursor: pointer;
