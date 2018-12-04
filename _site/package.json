@@ -1,5 +1,5 @@
 {
-  "name": "trillo",
+  "name": "Trillo",
   "version": "1.0.0",
   "description": "Landing page for trillo app",
   "main": "index.js",
@@ -13,8 +13,8 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Jefferon",
-  "license": "MIT",
+  "author": "Jonas",
+  "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",
     "concat": "^1.0.3",
