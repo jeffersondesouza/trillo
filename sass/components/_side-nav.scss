@@ -1,8 +1,15 @@
 .side-nav {
     font-size: 1.4rem;
     margin-top: 3.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: flex;
+        margin: 0;
+    }
     &__item {
         position: relative;
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
+        }
         &:not(:last-child) {
             margin-bottom: .5rem;
         }
@@ -15,21 +22,16 @@
             width: 3px;
             background-color: var(--color-primary);
             transform: scaleY(0);
-            transition: transform .2s, 
-                        width .4s cubic-bezier(1,0,0,1) .2s,
-                        background-color .2s;
+            transition: transform .2s, width .4s cubic-bezier(1, 0, 0, 1) .2s, background-color .2s;
         }
     }
-    &__item:active::before{
+    &__item:active::before {
         background-color: var(--color-primary-light);
-
     }
-
     &__item:hover::before,
     &__item--active::before {
         transform: scaleY(1);
         width: 100%;
-
     }
     &__link:link,
     &__link:visited {
@@ -38,16 +40,28 @@
         text-transform: uppercase;
         display: block;
         padding: 1.5rem 3rem;
-        display: flex;
-        align-items: center;
         position: relative;
         z-index: 10;
+        display: flex;
+        align-items: center;
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem;
+        }
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1.5rem .5rem;
+        }
     }
     &__icon {
         width: 1.75rem;
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .7rem;
+        }
     }
 }
 
@@ -56,4 +70,7 @@
     color: var(--grey-light-4);
     text-align: center;
     padding: 2.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }

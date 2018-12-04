@@ -1,22 +1,22 @@
+$bp-largest: 75em; // 1200px
+$bp-larg: 68.75em; // 1100px
+$bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
+/*  */
 
 :root {
     --color-primary: #eb2f64;
     --color-primary-light: #FF3366;
     --color-primary-dark: #BA265D;
-
     --grey-light-1: #faf9f9;
     --grey-light-2: #f4f2f2;
     --grey-light-3: #f0eeee;
     --grey-light-4: #ccc;
-    
     --grey-dark-1: #333;
     --grey-dark-2: #777;
     --grey-dark-3: #999;
-
-    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3)
-    --shadow-light: 0 2rem 6rem rgba(0,0,0,.6)
-    --line: 1px solid var(--grey-light-2);
-
+    --shadow-dark: 0 2rem 6rem rgba(0, 0, 0, .3) --shadow-light: 0 2rem 6rem rgba(0, 0, 0, .6) --line: 1px solid var(--grey-light-2);
 }
 
 * {
@@ -33,6 +33,9 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+    @media only screen and (max-width: $bp-larg) {
+        font-size: 50%;
+    }
 }
 
 body {
@@ -46,6 +49,6 @@ body {
     min-height: 100vh;
 }
 
-ul{
+ul {
     list-style: none;
 }
